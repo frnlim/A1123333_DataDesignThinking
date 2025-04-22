@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francoise Design: Taizhong 113-12 Population Map</title>
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center; /* Center the body content horizontally */
+            align-items: center; /* Center the body content vertically */
+            background-color: #f0f0f0; /* Optional background color for HTML */
+        }
         body {
             font-family: Arial, sans-serif;
             font-size: 10px;
-            margin: 0;
+            width: 80%; /* Set body width to 80% */
+            height: 80%; /* Set body height to 80% */
+            margin: auto;
             padding: 0;
         }
         .container {
@@ -32,6 +44,7 @@
             width: 30%; /* Set width of the card */
             height: 600px; /* Set height to match iframe */
             box-sizing: border-box; /* Include padding and border in height */
+            text-align: center;
         }
         .frame {
             flex: 1; /* Let the frame div take the remaining space */
