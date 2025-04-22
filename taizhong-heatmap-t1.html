@@ -8,24 +8,39 @@
         body {
             font-family: Arial, sans-serif;
             font-size: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: row; /* Align items in a row */
+            justify-content: center; /* Center content horizontally */
+            align-items: flex-start; /* Align items at the start of the container */
+            padding: 20px;
         }
         .card {
-        background-color: fdf5e2;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-        width: 80%; /* Set width to 80% */
-        margin-left: auto; /* Center horizontally */
-        margin-right: auto; /* Center horizontally */
-    }
+            background-color: #fdf5e2; /* Fix background color syntax */
+            padding: 10px;
+            margin-right: 20px; /* Add space between card and iframe */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            width: 30%; /* Set width of the card */
+        }
+        iframe {
+            flex: 1; /* Let the iframe take the remaining space */
+            max-width: 70%; /* Limit iframe width */
+            height: 600px; /* Set iframe height */
+            border: none; /* Remove border */
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-    <h2>台中市的人口數熱力圖</h2>
-    <h2>透過點擊縣市中的鄉鎮再顯示村里細節,熱力圖的顏色是根據城市人口的最小值、Q1、Q2、平均數、Q3、最大值來設計</h2>
+    <div class="container">
+        <div class="card">
+            <h2>台中市的人口數熱力圖</h2>
+            <h2>透過點擊縣市中的鄉鎮再顯示村里細節,熱力圖的顏色是根據台中市的村里人口的最小值、Q1、Q2、平均數、Q3、最大值來設計</h2>
+        </div>
+        <iframe src="https://plotdb.io/v/chart/37206" allowfullscreen="true"></iframe>
     </div>
-    <iframe src="https://plotdb.io/v/chart/37206" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
 </body>
 </html>
