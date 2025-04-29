@@ -5,116 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francoise Design: Taizhong 113-12 Above 65 Years Old Population Map</title>
     <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center; /* Center the body content horizontally */
-        align-items: center; /* Center the body content vertically */
-        background-color: #f0f0f0; /* Optional background color for HTML */
-    }
-    body {
-        font-family: Arial, sans-serif;
-        font-size: 10px;
-        width: 80%; /* Set body width to 80% */
-        height: 80%; /* Set body height to 80% */
-        margin: auto;
-        padding: 0;
-    }
-    .container {
-        display: flex;
-        flex-direction: column; /* Stack card above frame */
-        justify-content: center;
-        align-items: center; /* Center items horizontally */
-        padding: 20px;
-        background-color: #ffffff; /* Background color for the container */
-        border-radius: 10px; /* Rounded corners for the container */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow to the container */
-        max-width: 90%; /* Adjust the width of the container */
-        margin: auto;
-        flex-wrap: wrap; /* Ensure content wraps on smaller screens */
-    }
-    .card {
-        background-color: #fdf5e2; /* Fix background color syntax */
-        padding: 10px;
-        margin-bottom: 20px; /* Add space below the card */
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-        width: 90%; /* Set width of the card */
-        box-sizing: border-box; /* Include padding and border in width */
-        text-align: center;
-        word-wrap: break-word; /* Ensure text wraps */
-    }
-    .frame {
-        display: flex;
-        flex-direction: row; /* Arrange inner frames in a row */
-        justify-content: space-between; /* Add space between frames */
-        flex-wrap: wrap; /* Wrap frames on smaller screens */
-        width: 100%; /* Set width of the frame container */
-        max-width: 90%;
-        height: auto; /* Allow height adjustment */
-        background-color: #ffffff; /* Background color for the frame */
-        border-radius: 5px; /* Rounded corners for the frame */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the frame */
-        box-sizing: border-box; /* Include padding and border in size */
-        padding: 10px;
-    }
-    .frame div {
-        flex: 1; /* Let each inner div take equal space */
-        margin: 5px; /* Add spacing between divs */
-        background-color: #ffffff; /* Background color for inner divs */
-        border-radius: 5px; /* Rounded corners for inner divs */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to inner divs */
-        display: flex; /* Use flexbox for the iframe positioning */
-        justify-content: center; /* Center the iframe horizontally */
-        align-items: center; /* Center the iframe vertically */
-        height: 300px; /* Set height for inner divs */
-    }
-    iframe {
-        width: 100%; /* Let iframe span the entire div */
-        height: 100%; /* Let iframe span the entire div */
-        border: none; /* Remove border */
-        border-radius: 5px; /* Match the corner radius with the div */
-    }
-
-    /* Media query for smaller screens like phones */
-    @media (max-width: 768px) {
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center; /* Center the body content horizontally */
+            align-items: center; /* Center the body content vertically */
+            background-color: #f0f0f0; /* Optional background color for HTML */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            width: 80%; /* Set body width to 80% */
+            height: 80%; /* Set body height to 80% */
+            margin: auto;
+            padding: 0;
+        }
         .container {
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items */
+            display: flex;
+            flex-direction: column; /* Stack card above frame */
+            justify-content: center;
+            align-items: center; /* Center items horizontally */
+            padding: 20px;
+            background-color: #ffffff; /* Background color for the container */
+            border-radius: 10px; /* Rounded corners for the container */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow to the container */
+            max-width: 90%; /* Adjust the width of the container */
+            margin: auto;
         }
         .card {
-            width: 90%; /* Expand card width to fit the screen */
-            margin-bottom: 20px; /* Add bottom margin for spacing */
+            background-color: #fdf5e2; /* Fix background color syntax */
+            padding: 10px;
+            margin-bottom: 20px; /* Add space below the card */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            width: 90%; /* Set width of the card */
+            box-sizing: border-box; /* Include padding and border in width */
+            text-align: center;
+            word-wrap: break-word; /* Ensure text wraps */
         }
         .frame {
-            flex-direction: column; /* Stack inner divs vertically */
+            display: flex;
+            flex-direction: column; /* Stack inner frames vertically */
             align-items: center; /* Center inner divs */
+            width: 100%; /* Set width of the frame container */
+            max-width: 90%;
+            height: auto; /* Allow height adjustment */
+            background-color: #ffffff; /* Background color for the frame */
+            border-radius: 5px; /* Rounded corners for the frame */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the frame */
+            box-sizing: border-box; /* Include padding and border in size */
+            padding: 10px;
         }
         .frame div {
-            width: 90%; /* Expand div width to fit the screen */
-            height: 300px; /* Keep height for inner divs */
+            margin: 10px 0; /* Add vertical spacing between frames */
+            background-color: #ffffff; /* Background color for inner divs */
+            border-radius: 5px; /* Rounded corners for inner divs */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to inner divs */
+            display: flex;
+            flex-direction: column; /* Stack iframe and text vertically */
+            align-items: center; /* Center content inside */
+            padding: 10px;
+            width: 100%; /* Take full width */
         }
-    }
-</style>
+        iframe {
+            width: 100%; /* Let iframe span the entire div */
+            height: 300px; /* Set iframe height */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Match the corner radius with the div */
+        }
+        .frame div p {
+            margin-top: 10px; /* Add space between iframe and text */
+            font-size: 14px; /* Adjust font size for text */
+            text-align: center;
+        }
+
+        /* Media query for smaller screens like phones */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items */
+            }
+            .card {
+                width: 90%; /* Expand card width to fit the screen */
+                margin-bottom: 20px; /* Add bottom margin for spacing */
+            }
+            .frame div {
+                width: 90%; /* Expand div width to fit the screen */
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <div class="card">
         <h1>台中市的65歲以上人口數熱力圖</h1>
-        <h2>透過點擊縣市中的鄉鎮再顯示村里細節,熱力圖的顏色是根據台中市的村里65以上人口的最小值、Q1、Q2、平均數、Q3、最大值來當作參考</h2>
+        <h2>透過點擊縣市中的鄉鎮再顯示村里細節,熱力圖的顏色是根據台中市的村里65以上人口的最小值、Q1、Q2、平均數、Q3、最大值來當作參考。以下有三張熱量圖來參考。台中市65至79歲的人口數量高於80歲以上的人口。這主要是因為平均壽命約為80歲，大多數人尚未進入80歲以上的年齡層。此外，隨著年齡增加，死亡率也會逐漸上升，因此80歲以上的人口自然會減少，呈現出這樣的人口結構。
+
+</h2>
     </div>
     <div class="frame">
-        <div>
+        <div class="frame1">
             <iframe src="https://plotdb.io/v/chart/37338" allowfullscreen="true"></iframe>
+            <p>熱力圖 1: 台中市65歲以上人口熱力圖</p>
         </div>
-        <div>
+        <div class="frame2">
             <iframe src="https://plotdb.io/v/chart/37365" allowfullscreen="true"></iframe>
+            <p>熱力圖 2: 台中市65歲-79歲人口熱力圖</p>
         </div>
-        <div>
+        <div class="frame3">
             <iframe src="https://plotdb.io/v/chart/37369" allowfullscreen="true"></iframe>
+            <p>熱力圖 3: 台中市80歲以上人口熱力圖料</p>
         </div>
     </div>
 </div>
