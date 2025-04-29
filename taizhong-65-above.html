@@ -3,83 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francoise Design: Taizhong 113-12 Population Map</title>
+    <title>Francoise Design: Taizhong 113-12 Above 65 Years Old Population Map</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center; /* Center the body content horizontally */
-            align-items: center; /* Center the body content vertically */
-            background-color: #f0f0f0; /* Optional background color for HTML */
-        }
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            width: 80%; /* Set body width to 80% */
-            height: 80%; /* Set body height to 80% */
-            margin: auto;
-            padding: 0;
-        }
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center; /* Center the body content horizontally */
+        align-items: center; /* Center the body content vertically */
+        background-color: #f0f0f0; /* Optional background color for HTML */
+    }
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        width: 80%; /* Set body width to 80% */
+        height: 80%; /* Set body height to 80% */
+        margin: auto;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack card above frame */
+        justify-content: center;
+        align-items: center; /* Center items horizontally */
+        padding: 20px;
+        background-color: #ffffff; /* Background color for the container */
+        border-radius: 10px; /* Rounded corners for the container */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow to the container */
+        max-width: 90%; /* Adjust the width of the container */
+        margin: auto;
+        flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    }
+    .card {
+        background-color: #fdf5e2; /* Fix background color syntax */
+        padding: 10px;
+        margin-bottom: 20px; /* Add space below the card */
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        width: 90%; /* Set width of the card */
+        box-sizing: border-box; /* Include padding and border in width */
+        text-align: center;
+        word-wrap: break-word; /* Ensure text wraps */
+    }
+    .frame {
+        display: flex;
+        flex-direction: row; /* Arrange inner frames in a row */
+        justify-content: space-between; /* Add space between frames */
+        flex-wrap: wrap; /* Wrap frames on smaller screens */
+        width: 100%; /* Set width of the frame container */
+        max-width: 90%;
+        height: auto; /* Allow height adjustment */
+        background-color: #ffffff; /* Background color for the frame */
+        border-radius: 5px; /* Rounded corners for the frame */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the frame */
+        box-sizing: border-box; /* Include padding and border in size */
+        padding: 10px;
+    }
+    .frame div {
+        flex: 1; /* Let each inner div take equal space */
+        margin: 5px; /* Add spacing between divs */
+        background-color: #ffffff; /* Background color for inner divs */
+        border-radius: 5px; /* Rounded corners for inner divs */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to inner divs */
+        display: flex; /* Use flexbox for the iframe positioning */
+        justify-content: center; /* Center the iframe horizontally */
+        align-items: center; /* Center the iframe vertically */
+        height: 300px; /* Set height for inner divs */
+    }
+    iframe {
+        width: 100%; /* Let iframe span the entire div */
+        height: 100%; /* Let iframe span the entire div */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Match the corner radius with the div */
+    }
+
+    /* Media query for smaller screens like phones */
+    @media (max-width: 768px) {
         .container {
-            display: flex; /* Use flexbox for layout */
-            flex-direction: row; /* Align items in a row */
-            justify-content: center; /* Center content horizontally */
-            align-items: stretch; /* Stretch items to the same height */
-            padding: 20px;
-            background-color: #ffffff; /* Background color for the container */
-            border-radius: 10px; /* Rounded corners for the container */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow to the container */
-            max-width: 90%; /* Adjust the width of the container */
-            margin: auto;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items */
         }
         .card {
-            background-color: #fdf5e2; /* Fix background color syntax */
-            padding: 10px;
-            margin-right: 20px; /* Add space between card and frame */
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-            width: 30%; /* Set width of the card */
-            height: 600px; /* Set height to match iframe */
-            box-sizing: border-box; /* Include padding and border in height */
-            text-align: center;
+            width: 90%; /* Expand card width to fit the screen */
+            margin-bottom: 20px; /* Add bottom margin for spacing */
         }
         .frame {
-            flex: 1; /* Let the frame div take the remaining space */
-            max-width: 70%; /* Limit frame width */
-            height: 600px; /* Set frame height */
-            background-color: #ffffff; /* Background color for the frame */
-            border-radius: 5px; /* Rounded corners for the frame */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the frame */
-            display: flex; /* Use flexbox for the iframe positioning */
-            justify-content: center; /* Center the iframe horizontally */
-            align-items: center; /* Center the iframe vertically */
-            box-sizing: border-box; /* Include padding and border in size */
+            flex-direction: column; /* Stack inner divs vertically */
+            align-items: center; /* Center inner divs */
         }
-        iframe {
-            width: 100%; /* Let iframe span the entire frame */
-            height: 100%; /* Let iframe span the entire frame */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Match the corner radius with the frame */
+        .frame div {
+            width: 90%; /* Expand div width to fit the screen */
+            height: 300px; /* Keep height for inner divs */
         }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-
-        <div class="card">
-            <h1>台中市的65歲以上人口數熱力圖</h1>
-            <h2>透過點擊縣市中的鄉鎮再顯示村里細節,熱力圖的顏色是根據台中市的村里65以上人口的最小值、Q1、Q2、平均數、Q3、最大值來當作參考</h2>
+<div class="container">
+    <div class="card">
+        <h1>台中市的65歲以上人口數熱力圖</h1>
+        <h2>透過點擊縣市中的鄉鎮再顯示村里細節,熱力圖的顏色是根據台中市的村里65以上人口的最小值、Q1、Q2、平均數、Q3、最大值來當作參考</h2>
+    </div>
+    <div class="frame">
+        <div>
+            <iframe src="https://plotdb.io/v/chart/37338" allowfullscreen="true"></iframe>
         </div>
-        <div class="frame">
-            <iframe src="https://plotdb.io/v/chart/37206" allowfullscreen="true"></iframe>
+        <div>
+            <iframe src="https://plotdb.io/v/chart/37365" allowfullscreen="true"></iframe>
+        </div>
+        <div>
+            <iframe src="https://plotdb.io/v/chart/37369" allowfullscreen="true"></iframe>
         </div>
     </div>
-</body>
-</html>
-        </div>
-    </div>
+</div>
 </body>
 </html>
