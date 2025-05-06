@@ -93,6 +93,34 @@
             font-size: 14px; 
             text-align: center;
         }
+        .text-image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            box-sizing: border-box;
+        }
+        .text-image .text {
+            flex: 1;
+            padding-right: 20px;
+            font-size: 14px;
+        }
+        .text-image .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
 
         /* Media query for smaller screens like phones */
         @media (max-width: 768px) {
@@ -106,6 +134,14 @@
             }
             .frame div {
                 width: 90%; 
+            }
+            .text-image {
+                flex-direction: column;
+                align-items: center;
+            }
+            .text-image .text {
+                padding-right: 0;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -133,6 +169,14 @@
         <div class="frame3">
             <iframe src="https://plotdb.io/v/chart/37369" allowfullscreen="true"></iframe>
             <p>熱力圖 3: 台中市80歲以上人口熱力圖</p>
+        </div>
+    </div>
+    <div class="text-image">
+        <div class="text">
+            <p>針對台中市65-74歲、無行動不便但於不平坦地面行走吃力的長者（A11A21A31），計劃建立一個專為老人的通訊需求設計的社區中心，結合閱讀、社交和數位學習，以促進心理健康並增加社交互動。但是，以台中市的情況，許多長者覺得科技很難，或害怕學不會，因此不願意參加數位學習，所以就進行以下的方案。 閱讀與社交：透過漫畫與小說讀書會，讓長者輕鬆交流、分享心得，減少孤單感並建立友誼。 數位學習：提供簡單易懂的數位課程，教授手機使用、網路資訊搜尋及防詐騙技巧，增加長者的安全感。 在地文化：將家鄉文化融入學習內容，創作當地特色漫畫或故事，提升長者的參與意願和學習動機。 考量到許多長者對科技的抗拒，課程將結合有趣的漫畫或小說故事來說明數位技能，使學習過程更輕鬆。此外，中心將在社區內長者常出入的場所設立多個學習站，減少他們的行動負擔。同時，通過「長輩教長輩」的方式，鼓勵學會的長者互相幫助，提升自信與學習成效。此方案將滿足長者的安全需求（學習如何保護自己）、社交需求（參與活動、結交朋友）和自我實現需求（學會新技能、獲得成就感）。最後，將家鄉文化融入學習內容，創作當地特色漫畫或故事，增加長者的參與意願和學習動機。</p>
+        </div>
+        <div class="image">
+            <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2Fec7c8a57-db24-4fbb-9b7b-1f51d663a7e2.jpeg&w=1080&q=75" alt="台中市人口熱力圖">
         </div>
     </div>
 </div>
